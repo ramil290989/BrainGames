@@ -14,3 +14,7 @@
 <p>
 <p>asciinema brain-gcd
 <a href="https://asciinema.org/a/527760" target="_blank"><img src="https://asciinema.org/a/527760.svg" /></a>
+
+<p>
+<p>asciinema brain-progression
+<a href="https://asciinema.org/a/527825" target="_blank"><img src="https://asciinema.org/a/527825.svg" /></a>
