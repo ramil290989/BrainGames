@@ -18,3 +18,7 @@
 <p>
 <p>asciinema brain-progression
 <a href="https://asciinema.org/a/527825" target="_blank"><img src="https://asciinema.org/a/527825.svg" /></a>
+
+<p>
+<p>asciinema brain-prime
+<a href="https://asciinema.org/a/528032" target="_blank"><img src="https://asciinema.org/a/528032.svg" /></a>
