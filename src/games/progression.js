@@ -2,7 +2,7 @@
 import {gameRun} from '../index.js';
 import {getRandomNumber} from '../helpme.js';
 
-const condition  = ('What number is missing in this progression?');
+const condition  = ('What number is missing in the progression?');
 const randomRange = 10;
 
 const getQuestionAndCorrectAnswer = () => {
