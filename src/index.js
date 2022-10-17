@@ -25,4 +25,4 @@ const gameRun = (condition, getQuestionAndCorrectAnswer) => {
   }
 };
 
-export default { gameRun };
+export { gameRun };
