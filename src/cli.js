@@ -7,4 +7,4 @@ const user = () => {
   return userName;
 };
 
-export default { user };
+export { user };
