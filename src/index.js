@@ -3,7 +3,6 @@ import readlineSync, { question } from 'readline-sync';
 
 
 const gameRun = (condition, getQuestionAndCorrectAnswer) => {
-console.log('Welcome to the Brain Games!');
 
 const userName = user();
 console.log(condition);
