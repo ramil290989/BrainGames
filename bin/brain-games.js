@@ -1,3 +1,4 @@
 #!/usr/bin/env node
-import gameRun from '../src/games/games.js'
+import gameRun from '../src/games/games.js';
+
 gameRun();
