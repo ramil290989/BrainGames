@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import {userForGames} from '../cli.js';
+import {user} from '../cli.js';
 
-const userName = userForGames();
+const userName = user();
 
 export default () => {
 };
