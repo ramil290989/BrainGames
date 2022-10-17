@@ -7,4 +7,9 @@ const user = () => {
     return userName;
 }
 
-export {user};
+const userForGames = () => {
+    var userName = readlineSync.question();
+    console.log('/Hello, ' + userName + '/');
+    return userName;
+}
+export {user, userForGames};
