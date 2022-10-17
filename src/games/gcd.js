@@ -9,7 +9,7 @@ const getQuestionAndCorrectAnswer = () => {
     const a = getRandomNumber(randomRange);
     const b = getRandomNumber(randomRange);
     const correctAnswer = (getGcd(a, b)).toString();
-    const question = `${a} ${b}`;
+    const question = (`Question: ${a} ${b}`);
     return [question, correctAnswer];
 }
 

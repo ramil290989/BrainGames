@@ -2,7 +2,7 @@
 import {gameRun} from '../index.js';
 import {getRandomNumber} from '../helpme.js';
 
-const condition  = ('Answer "yes" if given number is prime. Otherwise answer "no"');
+const condition  = ("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 const randomRange = 100;
 
 const getQuestionAndCorrectAnswer = () => {
@@ -21,7 +21,7 @@ const getQuestionAndCorrectAnswer = () => {
             }
         }
     }    
-    const question = `${number}`;
+    const question = (`Question: ${number}`);
     return [question, correctAnswer];
 }
 

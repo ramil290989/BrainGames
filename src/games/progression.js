@@ -2,7 +2,7 @@
 import {gameRun} from '../index.js';
 import {getRandomNumber} from '../helpme.js';
 
-const condition  = ('What number is missing in the progression?');
+const condition  = ('What number is missing in this progression?');
 const randomRange = 10;
 
 const getQuestionAndCorrectAnswer = () => {
@@ -23,7 +23,7 @@ const getQuestionAndCorrectAnswer = () => {
     
     const correctAnswer = (array[questionItem]).toString();
     array[questionItem] = '..';
-    const question = `${array}`;
+    const question = (`Question: ${array}`);
     
     return [question, correctAnswer];
 }
