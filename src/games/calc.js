@@ -12,7 +12,7 @@ const getQuestionAndCorrectAnswer = () => {
     const expressions = [a + b, a - b, a * b];
     const expressionsItem = getRandomNumber(operatorsStr.length);
     const correctAnswer = (expressions[expressionsItem]).toString();
-    const question = `${a} ${operatorsStr[expressionsItem]} ${b}`;
+    const question = (`Question: ${a} ${operatorsStr[expressionsItem]} ${b}`);
     return [question, correctAnswer];
 }
 
