@@ -23,7 +23,7 @@ const getQuestionAndCorrectAnswer = () => {
     
     const correctAnswer = (array[questionItem]).toString();
     array[questionItem] = '..';
-    const question = (`Question: ${array}`);
+    const question = (`Question: ${array.join(' ')}`);
     
     return [question, correctAnswer];
 }
