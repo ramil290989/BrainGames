@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import {user} from '../cli.js';
+import { user } from '../cli.js';
 
 const userName = user();
 
