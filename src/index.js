@@ -1,39 +1,31 @@
-import readlineSync from 'readline-sync';
+import {user} from '../src/cli.js';
+import readlineSync, { question } from 'readline-sync';
 
-/* приветствие */
-const hello = () => {
-    return console.log('Welcome to the Brain Games!');
-}
 
-/* функция выбора рандомного числа */
-const random = (range) => {
-    var result = Math.floor(Math.random() * range);
-    return result;
-}
+const gameRun = (condition, getQuestionAndCorrectAnswer) => {
+console.log('Welcome to the Brain Games!');
 
-/* функция задает вопрос и получает ответ от пользователя */
-const questionAndUserAnswer = (question) => {
-    console.log(`Question: ${question}`);
-    var answer = readlineSync.question(`Your answer: `);
-    return answer;
-}
+const userName = user();
+console.log(condition);
 
-/* функция сравнения ответа пользователя с правильным ответом,
-поздравление пользователя, если 3 правильных ответа,
-функция задает счетчик циклу while
-*/
-const compareAnswer = (userAnswer, correctAnswer, userName, correctAnswerSum) => {
-    if (userAnswer === correctAnswer) {
+let round = 0;
+const numberOfRounds = 3;
+
+while (round < numberOfRounds) {
+    const [question, correctAnswer] = getQuestionAndCorrectAnswer();    
+    console.log(`${question}`);
+    let userAnswer = readlineSync.question(`Your answer: `);
+    if (userAnswer === (`${correctAnswer}`)) {
         console.log('Correct!');
-        correctAnswerSum += 1;
-        if (correctAnswerSum === 3) {
+        round += 1;
+        if (round === 3) {
             console.log(`Congratulations, ${userName}!`);
         }
-        return correctAnswerSum;
     } else {
         console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${userName}`); 
-        return correctAnswerSum = 4;               
+        break;           
     }    
 }
+}
 
-export {hello, random, questionAndUserAnswer, compareAnswer};
+export {gameRun};
