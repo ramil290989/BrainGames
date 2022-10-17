@@ -2,7 +2,7 @@
 import {gameRun} from '../index.js';
 import {getRandomNumber} from '../helpme.js';
 
-const condition  = ('Answer "yes" if number even otherwise answer "no".');
+const condition  = ('Answer "yes" if the number is even, otherwise answer "no".');
 let randomRange = 10;
 let correctAnswer = '';
 
