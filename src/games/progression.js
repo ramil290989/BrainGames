@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { gameRun } from '../index.js';
-import { getRandomNumber } from '../helpme.js';
+import runGame from '../index.js';
+import { getRandomNumber } from '../utils.js';
 
 const condition = ('What number is missing in the progression?');
 const randomRange = 10;
@@ -25,6 +25,8 @@ const getQuestionAndCorrectAnswer = () => {
   return [question, correctAnswer];
 };
 
-export default () => {
-  gameRun(condition, getQuestionAndCorrectAnswer);
+const runProgressionGame = () => {
+  runGame(condition, getQuestionAndCorrectAnswer);
 };
+
+export default runProgressionGame;

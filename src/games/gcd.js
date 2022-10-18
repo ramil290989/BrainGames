@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { gameRun } from '../index.js';
-import { getRandomNumber, getGcd } from '../helpme.js';
+import runGame from '../index.js';
+import { getRandomNumber, getGcd } from '../utils.js';
 
 const condition = ('Find the greatest common divisor of given numbers.');
 const randomRange = 100;
@@ -13,6 +13,8 @@ const getQuestionAndCorrectAnswer = () => {
   return [question, correctAnswer];
 };
 
-export default () => {
-  gameRun(condition, getQuestionAndCorrectAnswer);
+const runGcgGame = () => {
+  runGame(condition, getQuestionAndCorrectAnswer);
 };
+
+export default runGcgGame;

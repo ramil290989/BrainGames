@@ -1,7 +1,7 @@
-import { user } from './cli.js';
 import readlineSync from 'readline-sync';
+import user from './cli.js';
 
-const gameRun = (condition, getQuestionAndCorrectAnswer) => {
+const runGame = (condition, getQuestionAndCorrectAnswer) => {
   const userName = user();
   console.log(condition);
 
@@ -11,12 +11,12 @@ const gameRun = (condition, getQuestionAndCorrectAnswer) => {
   while (round < numberOfRounds) {
     const [question, correctAnswer] = getQuestionAndCorrectAnswer();
     console.log(`${question}`);
-    const userAnswer = readlineSync.question(`Your answer: `);
+    const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === (`${correctAnswer}`)) {
       console.log('Correct!');
       round += 1;
       if (round === 3) {
-          console.log(`Congratulations, ${userName}!`);
+        console.log(`Congratulations, ${userName}!`);
       }
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${userName}!`);
@@ -25,4 +25,4 @@ const gameRun = (condition, getQuestionAndCorrectAnswer) => {
   }
 };
 
-export { gameRun };
+export default runGame;

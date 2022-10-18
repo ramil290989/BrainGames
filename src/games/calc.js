@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { gameRun } from '../index.js';
-import { getRandomNumber } from '../helpme.js';
+import runGame from '../index.js';
+import { getRandomNumber } from '../utils.js';
 
 const condition = ('What is the result of the expression?');
 const randomRange = 10;
@@ -16,6 +16,8 @@ const getQuestionAndCorrectAnswer = () => {
   return [question, correctAnswer];
 };
 
-export default () => {
-  gameRun(condition, getQuestionAndCorrectAnswer);
+const runCalcGame = () => {
+  runGame(condition, getQuestionAndCorrectAnswer);
 };
+
+export default runCalcGame;

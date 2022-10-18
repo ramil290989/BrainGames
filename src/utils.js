@@ -8,9 +8,9 @@ const getRandomNumber = (range) => {
 const getGcd = (a, b) => {
   while (a !== b) {
     if (a > b) {
-      a = a - b;
+      a -= b;
     } else {
-      b = b - a;
+      b -= a;
     }
   }
   return a;
