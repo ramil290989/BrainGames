@@ -6,11 +6,14 @@ const getRandomNumber = (range) => {
 
 /* функция нахождения НОД */
 const getGcd = (a, b) => {
+  let c = 0;
   while (a !== b) {
     if (a > b) {
-      a -= b;
+      c = a;
+      a = c - b;
     } else {
-      b -= a;
+      c = b;
+      b = c - a;
     }
   }
   return a;
