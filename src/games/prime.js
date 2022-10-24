@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import runGame from '../index.js';
-import { getRandomNumber } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
 const condition = ('Answer "yes" if given number is prime. Otherwise answer "no".');
 const randomRange = 100;

@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 import runGame from '../index.js';
-import { getRandomNumber } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
 const condition = ('Answer "yes" if the number is even, otherwise answer "no".');
 const randomRange = 10;
 let correctAnswer = '';
 
-const isEven = (number) => {// функция проверки числа на четность
+const isEven = (number) => { // функция проверки числа на четность
   let result = '';
-  (number % 2 === 0) ? result = 'yes' : result = 'no';
+  number % 2 === 0 ? result = 'yes' : result = 'no';
   return result;
 };
 

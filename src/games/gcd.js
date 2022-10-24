@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 import runGame from '../index.js';
-import { getRandomNumber } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
 const condition = ('Find the greatest common divisor of given numbers.');
 const randomRange = 100;
 
-const getGcd = (a, b) => {// функция нахождения НОД
+const getGcd = (a, b) => { // функция нахождения НОД
   if (!b) {
     return a;
   }

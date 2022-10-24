@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import runGame from '../index.js';
-import { getRandomNumber } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
 const condition = ('What number is missing in the progression?');
 const randomRange = 10;
@@ -12,7 +12,7 @@ const getProgressionArray = (firstItem, arrayLength, progression) => {
     array[i] = array[i - 1] + progression;
   }
   return array;
-}
+};
 
 const getQuestionAndCorrectAnswer = () => {
   const minArrayLength = 5;

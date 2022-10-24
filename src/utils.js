@@ -4,4 +4,4 @@ const getRandomNumber = (range) => {
   return result;
 };
 
-export { getRandomNumber };
+export default getRandomNumber;
