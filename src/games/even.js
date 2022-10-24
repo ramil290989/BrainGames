@@ -8,7 +8,11 @@ let correctAnswer = '';
 
 const isEven = (number) => { // функция проверки числа на четность
   let result = '';
-  number % 2 === 0 ? result = 'yes' : result = 'no';
+  if (number % 2 === 0) {
+    result = 'yes';
+  } else {
+    result = 'no';
+  }
   return result;
 };
 
