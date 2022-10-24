@@ -1,15 +1,23 @@
 #!/usr/bin/env node
 import runGame from '../index.js';
-import { getRandomNumber, getGcd } from '../utils.js';
+import { getRandomNumber } from '../utils.js';
 
 const condition = ('Find the greatest common divisor of given numbers.');
 const randomRange = 100;
 
+const getGcd = (a, b) => {// функция нахождения НОД
+  if (!b) {
+    return a;
+  }
+  return getGcd(b, a % b);
+};
+
 const getQuestionAndCorrectAnswer = () => {
   const a = getRandomNumber(randomRange);
   const b = getRandomNumber(randomRange);
-  const correctAnswer = (getGcd(a, b)).toString();
-  const question = (`Question: ${a} ${b}`);
+  const gcd = getGcd(a, b);
+  const correctAnswer = (gcd).toString();
+  const question = `${a} ${b}`;
   return [question, correctAnswer];
 };
 

@@ -6,14 +6,16 @@ const condition = ('Answer "yes" if the number is even, otherwise answer "no".')
 const randomRange = 10;
 let correctAnswer = '';
 
+const isEven = (number) => {// функция проверки числа на четность
+  let result = '';
+  (number % 2 === 0) ? result = 'yes' : result = 'no';
+  return result;
+};
+
 const getQuestionAndCorrectAnswer = () => {
   const number = getRandomNumber(randomRange);
-  if (number % 2 === 0) {
-    correctAnswer = 'yes';
-  } else {
-    correctAnswer = 'no';
-  }
-  const question = (`Question: ${number}`);
+  correctAnswer = isEven(number);
+  const question = `${number}`;
   return [question, correctAnswer];
 };
 

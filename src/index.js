@@ -6,11 +6,11 @@ const runGame = (condition, getQuestionAndCorrectAnswer) => {
   console.log(condition);
 
   let round = 0;
-  const numberOfRounds = 3;
+  const roundsCount = 3;
 
-  while (round < numberOfRounds) {
+  while (round < roundsCount) {
     const [question, correctAnswer] = getQuestionAndCorrectAnswer();
-    console.log(`${question}`);
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === (`${correctAnswer}`)) {
       console.log('Correct!');
