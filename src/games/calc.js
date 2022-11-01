@@ -17,6 +17,8 @@ const getCorrectAnswer = (operator, number1, number2) => {
     case '*':
       result = number1 * number2;
       break;
+    default:
+      result = 0;
   }
   return result;
 };
