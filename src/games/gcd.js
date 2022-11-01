@@ -2,7 +2,7 @@
 import runGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const condition = ('Find the greatest common divisor of given numbers.');
+const mission = 'Find the greatest common divisor of given numbers.';
 const randomRange = 100;
 
 const getGcd = (a, b) => { // функция нахождения НОД
@@ -22,7 +22,7 @@ const getQuestionAndCorrectAnswer = () => {
 };
 
 const runGcgGame = () => {
-  runGame(condition, getQuestionAndCorrectAnswer);
+  runGame(mission, getQuestionAndCorrectAnswer);
 };
 
 export default runGcgGame;

@@ -2,29 +2,21 @@
 import runGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const condition = ('Answer "yes" if the number is even, otherwise answer "no".');
+const mission = 'Answer "yes" if the number is even, otherwise answer "no".';
 const randomRange = 10;
 let correctAnswer = '';
 
-const isEven = (number) => { // функция проверки числа на четность
-  let result = '';
-  if (number % 2 === 0) {
-    result = 'yes';
-  } else {
-    result = 'no';
-  }
-  return result;
-};
+const isEven = number => number % 2 === 0; // функция проверки числа на четность
 
 const getQuestionAndCorrectAnswer = () => {
   const number = getRandomNumber(randomRange);
-  correctAnswer = isEven(number);
+  correctAnswer = isEven(number) ? 'yes' : 'no';
   const question = `${number}`;
   return [question, correctAnswer];
 };
 
 const runEvenGame = () => {
-  runGame(condition, getQuestionAndCorrectAnswer);
+  runGame(mission, getQuestionAndCorrectAnswer);
 };
 
 export default runEvenGame;

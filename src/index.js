@@ -1,9 +1,9 @@
 import readlineSync from 'readline-sync';
-import user from './cli.js';
+import greetingUser from './cli.js';
 
-const runGame = (condition, getQuestionAndCorrectAnswer) => {
-  const userName = user();
-  console.log(condition);
+const runGame = (mission, getQuestionAndCorrectAnswer) => {
+  const userName = greetingUser();
+  console.log(mission);
 
   let round = 0;
   const roundsCount = 3;

@@ -2,7 +2,7 @@
 import runGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const condition = ('Answer "yes" if given number is prime. Otherwise answer "no".');
+const mission = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const randomRange = 100;
 
 const isPrime = (number) => {
@@ -30,7 +30,7 @@ const getQuestionAndCorrectAnswer = () => {
 };
 
 const runPrimeGame = () => {
-  runGame(condition, getQuestionAndCorrectAnswer);
+  runGame(mission, getQuestionAndCorrectAnswer);
 };
 
 export default runPrimeGame;

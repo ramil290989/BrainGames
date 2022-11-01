@@ -2,7 +2,7 @@
 import runGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const condition = ('What number is missing in the progression?');
+const mission = 'What number is missing in the progression?';
 const randomRange = 10;
 
 const getProgressionArray = (firstItem, arrayLength, progression) => {
@@ -29,7 +29,7 @@ const getQuestionAndCorrectAnswer = () => {
 };
 
 const runProgressionGame = () => {
-  runGame(condition, getQuestionAndCorrectAnswer);
+  runGame(mission, getQuestionAndCorrectAnswer);
 };
 
 export default runProgressionGame;
