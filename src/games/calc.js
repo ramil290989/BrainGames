@@ -1,41 +1,33 @@
-#!/usr/bin/env node
 import runGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const mission = 'What is the result of the expression?';
+const gameRule = 'What is the result of the expression?';
 const randomRange = 10;
+const operatorsStr = '+-*';
 
-const getCorrectAnswer = (operator, number1, number2) => {
-  let result = 0;
+const getCorrectAnswerNum = (operator, number1, number2) => {
   switch (operator) {
     case '+':
-      result = number1 + number2;
-      break;
+      return number1 + number2;
     case '-':
-      result = number1 - number2;
-      break;
-    case '*':
-      result = number1 * number2;
-      break;
+      return number1 - number2;
     default:
-      result = 0;
+      return number1 * number2;
   }
-  return result;
 };
 
 const getQuestionAndCorrectAnswer = () => {
   const number1 = getRandomNumber(randomRange);
   const number2 = getRandomNumber(randomRange);
-  const operatorsStr = '+-*';
   const expressionsItem = getRandomNumber(operatorsStr.length);
   const operator = operatorsStr[expressionsItem];
-  const correctAnswer = (getCorrectAnswer(operator, number1, number2)).toString();
+  const correctAnswer = getCorrectAnswerNum(operator, number1, number2).toString();
   const question = `${number1} ${operator} ${number2}`;
   return [question, correctAnswer];
 };
 
 const runCalcGame = () => {
-  runGame(mission, getQuestionAndCorrectAnswer);
+  runGame(gameRule, getQuestionAndCorrectAnswer);
 };
 
 export default runCalcGame;
