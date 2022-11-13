@@ -4,9 +4,7 @@ import getRandomNumber from '../utils.js';
 const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 const randomRange = 10;
 
-const isEven = (number) => {  // функция проверки числа на четность
-  return number % 2 === 0 ? true : false;
-};
+const isEven = (number) => number % 2 === 0;
 
 const getQuestionAndCorrectAnswer = () => {
   const number = getRandomNumber(randomRange);
