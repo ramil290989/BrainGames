@@ -15,7 +15,7 @@ const getProgressionArray = (firstItem, arrayLength, progressionStep) => {
 };
 
 const getQuestionAndCorrectAnswer = () => {
-  const randomArrayLength = getRandomNumber(5);
+  const randomArrayLength = getRandomNumber(minArrayLength);
   const arrayLength = minArrayLength + randomArrayLength;
   const firstItem = getRandomNumber(randomRange);
   const progressionStep = getRandomNumber(randomRange);

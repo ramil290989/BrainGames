@@ -15,10 +15,11 @@ const runGame = (gameRule, getQuestionAndCorrectAnswer) => {
     if (userAnswer === (`${correctAnswer}`)) {
       console.log('Correct!');
     } else {
-      return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${userName}!`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${userName}!`);
+      return;
     }
   }
-  return console.log(`Congratulations, ${userName}!`);
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default runGame;
