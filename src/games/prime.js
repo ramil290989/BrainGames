@@ -5,6 +5,9 @@ const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 const randomRange = 100;
 
 const isPrime = (number) => {
+  if (number === 0) {
+    return true;
+  }
   if (number === 1) {
     return false;
   }
